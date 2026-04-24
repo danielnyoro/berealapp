@@ -8,12 +8,13 @@ export default function AuthLayout(){
         <Stack screenOptions={{
             headerStyle:{backgroundColor: "#03585e"},
             headerTintColor: "white",
-            headerTitle: "Authentication",
-            headerTitleAlign:"center"
+            headerTitle: "A",
+            headerTitleAlign:"center",
+            headerShown: false
         }}
         >
-            <Stack.Screen name="signup" options={{title:"Sign Up"}}/>
-            <Stack.Screen name="login" options={{title:"Log In"}} />
+            <Stack.Screen name="index" options={{title:"Sign In"}}/>
+            <Stack.Screen name="signup" options={{title:"Sign Up"}} />
             
         </Stack>
     )

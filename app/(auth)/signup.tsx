@@ -10,38 +10,59 @@ export default function SignUpScreen(){
     return (
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
-          <View style={styles.imageContainer}>
-            <Image source={require("../../assets/images/favicon.png")} 
-            />
-            
-          </View>
-          <Text style={styles.title}>Welcome Back</Text>
-          <Text style={styles.subtitle}>Sign In to Continue</Text>
+          <View style={styles.imageContainer}></View>
+          <Text style={styles.title}>Sign Up Form</Text>
+          <Text style={styles.subtitle}>Create Your Account</Text>
           <View style={styles.form}>
             <TextInput
-              placeholder="Email..."
-              placeholderTextColor="black"
-              autoComplete="email"
-              autoCapitalize="none"
-              keyboardType="email-address"
+              placeholder="First Name"
+              placeholderTextColor="#6e838b"
+              keyboardType="default"
               style={styles.input}
             />
             <TextInput
-              placeholder="password..."
-              placeholderTextColor="black"
-              autoComplete="password"
-              secureTextEntry
-              autoCapitalize="none"
+              placeholder="Second Name"
+              placeholderTextColor="#6e838b"
+              keyboardType="default"
+              returnKeyType="next"
               style={styles.input}
             />
+            <TextInput
+              placeholder="Email"
+              placeholderTextColor="#6e838b"
+              style={styles.input}
+              autoCapitalize="none"
+              autoCorrect={false}
+              returnKeyType="next"
+              inputMode="email"
+            />
+            <TextInput
+              placeholder="Password"
+              placeholderTextColor="#6e838b"
+              returnKeyType="next"
+              autoCapitalize="none"
+              secureTextEntry={true}
+              autoCorrect={false}
+              style={styles.input}
+            />
+            <TextInput
+              placeholder="Confirm Password"
+              placeholderTextColor="#6e838b"
+              autoCapitalize="none"
+              secureTextEntry={true}
+              autoCorrect={false}
+              style={styles.input}
+            />
+            <View />
+
             <TouchableOpacity style={styles.button}>
-              <Text style={styles.buttonText}>Sign In</Text>
+              <Text style={styles.buttonText}>Submit</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.linkbutton}>
               <Text style={styles.linkText}>
-                Don't have an Account ?{" "}
-                <Text style={styles.linkTextButton}>Sign Up</Text>
+                Thank you for Singing Up,{" "}
+                <Text style={styles.linkTextButton}>Sign In </Text>
               </Text>
             </TouchableOpacity>
           </View>
@@ -58,7 +79,9 @@ const styles = StyleSheet.create({
     },
   container: {
     flex: 1,
-    marginTop: 20
+    marginTop: 0,
+    backgroundColor:"#011636ed"
+
   },
   content: {
     flex: 1,
@@ -67,9 +90,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 28,
-    fontWeight: "bold",
+    fontWeight: "200",
     marginBottom: 20,
-    textAlign: "center"
+    textAlign: "left",
+    color:"white"
   },
   subtitle: {
     fontSize: 16,
@@ -78,6 +102,15 @@ const styles = StyleSheet.create({
   },
   form: {
     width: "100%",
+    backgroundColor:"#def1eb",
+    borderRadius:12,
+    padding: 15,
+    marginTop: 10,
+    borderWidth: 0.5,
+    borderColor: "rgba(43, 58, 43, 0.93)"
+
+
+    
   },
   input: {
     backgroundColor: "#cbe7e7",
@@ -87,6 +120,8 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     borderWidth: 1,
     borderColor: "#e0e0e0",
+    color: "#000000",
+    fontWeight: "500"
   },
   button: {
     backgroundColor: "black",

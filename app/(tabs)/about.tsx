@@ -30,7 +30,7 @@ export default function About(){
           </Text>
 
           <TouchableOpacity
-            onPress={() => router.push("/(auth)/login")}
+            onPress={() => router.replace("/(auth)/index")}
             style={{
               backgroundColor: "green",
               padding: 10,
@@ -42,6 +42,7 @@ export default function About(){
                 color:"white", textAlign:"center"
             }}><Text>Go to Login Screen</Text></Text>
           </TouchableOpacity>
+
           <Image
             source={require("../../assets/images/freenaturestock-2263.jpg")}
             style={{
