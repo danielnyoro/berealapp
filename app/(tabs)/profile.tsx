@@ -5,17 +5,21 @@ import { Text, View } from "react-native"
 import{ router } from "expo-router"
 
 export default function Profie(){
-    return(
-        <Stack>
-            <View>
-                <Text 
-                style={{
-                    flex:1,
-                    justifyContent:"center",
-                    alignItems:"center"
-                }}
-                >"This is My Profile, Finish Setting Up Your Profile"</Text>   
-            </View>
-        </Stack>
+    return (
+
+        <View>
+            <Text>Profile Information & Biodata</Text>
+            <Text>Ensure all the Information Keyed In is Accurate and Consistent with wahat was filled on the Physical Biodata Form</Text>
+        </View>
+        <Host>
+            VIew<Button></Button>
+            <VStack>
+                <Button></Button>
+
+
+            </VStack>
+        </Host>
+
+
     )
 }

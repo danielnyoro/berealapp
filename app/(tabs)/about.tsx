@@ -30,7 +30,7 @@ export default function About(){
           </Text>
 
           <TouchableOpacity
-            onPress={() => router.replace("/(auth)/index")}
+            onPress={() => router.replace("/(auth)/signup")}
             style={{
               backgroundColor: "green",
               padding: 10,
@@ -46,8 +46,8 @@ export default function About(){
           <Image
             source={require("../../assets/images/freenaturestock-2263.jpg")}
             style={{
-              width: 200,
-              height: 200,
+              width: 100,
+              height: 100,
             }}
           />
           <ActivityIndicator size={"large"} color={"green"} />
