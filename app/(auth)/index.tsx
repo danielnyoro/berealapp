@@ -15,7 +15,7 @@ export default function SignInScreen(){
       <SafeAreaView style={styles.container}>
         <View style={styles.content}>
           <View style={styles.imageContainer}>
-            <Image source={require("../../assets/images/favicon.png")} style={styles.image}/>
+            <Image source={require("../../assets/images/icon.png")} style={styles.image}/>
           </View>
           <Text style={styles.title}>Welcome Back</Text>
           <Text style={styles.subtitle}>Sign In to Continue</Text>
