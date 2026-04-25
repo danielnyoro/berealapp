@@ -1,11 +1,12 @@
 
 import { Button } from "@react-navigation/elements"
-import { Stack } from "expo-router"
-import { Text, View } from "react-native"
-import{ router } from "expo-router"
-import{BottomSheet, Host, VStack} from "react-native"
+import { Text, View } from "react-native";
+import BottomSheet, {Host, VStack} from "@gorhom/bottom-sheet";
 
-export default function Profie(){
+import {useState} from "react"
+
+export default function Profile(){
+    const [isOpened, setisOpened]= useState(false);
     return (
 
         <View>
@@ -15,15 +16,19 @@ export default function Profie(){
          
          <Host>
             <View>
-                <Button>
+                <Button onPress={() => setIsOpened(true)} >
                     <Text>Open Bottom Sheet</Text>
                 </Button>
             </View>
 
             <VStack>
-                <BottomSheet></BottomSheet>
+                <BottomSheet isOpened={isOpened} onIsOpenedChange={setIsOpened} >
+                 <View style={{styles.bottomSheet}}>
+                    <Text>Terms & Conditions</Text>
+                    <Text>Ensure all the Information Keyed In is Accurate and Consistent with wahat was filled on the Physical Biodata Form</Text>
+                 </View>
 
-
+                </BottomSheet>
             </VStack>
          </Host>   
 
@@ -33,3 +38,12 @@ export default function Profie(){
 
     )
 }
+
+const styles= StyleSheet.create({
+
+    bottomSheet:{
+        height: 500,
+        backgroundColor:"white",
+        borderWidth: 1
+    }
+})
